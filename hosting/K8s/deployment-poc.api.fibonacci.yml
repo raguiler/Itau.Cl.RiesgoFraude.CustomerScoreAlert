@@ -1,0 +1,45 @@
+﻿kind: Deployment
+apiVersion: apps/v1
+metadata: 
+  name: pocapifibonacci-deployment
+  labels:
+    k8s-app: fibonacciapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: fibonacciapi
+  template:
+    metadata:
+      name: fibonacciapi
+      labels:
+        k8s-app: fibonacciapi
+    spec:
+      containers:
+        - name: fibonacciapi
+          image: ybustamante/fibonacciapi:latest
+          ports:
+            - containerPort: 8090
+          resources:
+            limits:
+              memory: 129Mi
+              cpu: "500m"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8090
+              scheme: HTTP
+            timeoutSeconds: 1
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          terminationMessagePath: /dev/termination-log
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8090
+              scheme: HTTP
+            timeoutSeconds: 1
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
