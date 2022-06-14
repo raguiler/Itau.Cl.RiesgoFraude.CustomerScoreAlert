@@ -1,0 +1,65 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:33220",
+      "sslPort": 44349
+    }
+  },
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Itau.Cl.RF.CustomerRelationshipMgmnt.Bff.API": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ClientSecretApicGw": "a9207314279d8640f0b4124296271893",
+        "BasePathApiGw": "https://gw.dev.apis.itauchile.cl/inner/providers/datamart-customer-relationship-management/v1/",
+        "ClientIdApicGw": "4cfc526c5b05f098694e08452eb13873",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ApiKeyDatamart": "PVAq2OqIkSEkwECk9iSmvyUyI6WlIuUy10UAW70ATmE9cW5a8ZDduA=="
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7149;http://localhost:5149"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "publishAllPorts": true,
+      "useSSL": true
+    },
+    "Itau.Cl.RF.CustomerScoreAlert.API": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ApplicationNameAuthFactor": "itoken",
+        "ChannelIdBScore": "08",
+        "ClientSecretBlock": "c4de93ee56f92fb747990377edffd38a",
+        "BasePathAuthFactor": "https://apiinqa.itauchile2.cl/channels/web/party-authentication/v1.0/",
+        "ClientIdBlock": "9d8e156cff9bdbbc3ec584a002c69765",
+        "ClientIdAuthFactor": "8ea390a4-25dc-4c7e-87c0-bacbafa31732",
+        "ChannelCodeAuthFactor": "11",
+        "ClientSecretBScore": "ac22d935c28d9047599e6f5cc3ddf1f2",
+        "BasePathBlock": "https://apiindes.itauchile.cl/inner/acl/party-authentication/v1.0/",
+        "ApplicationCodeAuthFactor": "02",
+        "ClientIdBScore": "8a65fa05952bdceab181a6de05c6189e",
+        "BasePathBiometricScore": "https://apiindes.itauchile.cl/develop/riesgo-y-fraude/party-authentication/v1/",
+        "BasePathSendNotification": "https://apiindes.itauchile.cl/inner/acl/contact-handler/v1.0/",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ClientSecretAuthFactor": "uX4oU5sG1uY3dH4sE1bC2mV5iX1wA2aO0aP5jB5oE4vM2dL0fM"
+      },
+      "applicationUrl": "https://localhost:7149;http://localhost:5149"
+    }
+  }
+}
